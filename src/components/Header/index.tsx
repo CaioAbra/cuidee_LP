@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Header() {
   return (
-    <header className="w-full  text-white px-6 py-4">
+    <header className="w-full text-white px-6 py-4">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo + CRM-PR */}
         <div className="flex items-center gap-4">
@@ -15,10 +15,10 @@ export default function Header() {
 
         {/* Navegação */}
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
-          <a href="#" className="hover:text-primary transition">
+          <a href="#" className="hover:text-primary-base transition font-normal text-base">
             Como funciona
           </a>
-          <a href="#" className="hover:text-primary transition">
+          <a href="#" className="hover:text-primary-base transition font-normal text-base">
             Perguntas frequentes
           </a>
         </nav>

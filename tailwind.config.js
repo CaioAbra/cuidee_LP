@@ -8,6 +8,7 @@ const config = {
     extend: {
       fontFamily: {
         sans: ["Inter", ...fontFamily.sans],
+        raleway: ["Raleway", ...fontFamily.sans],
       },
       colors: {
         primary: {
