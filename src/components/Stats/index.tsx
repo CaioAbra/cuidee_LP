@@ -57,19 +57,18 @@ export default function Stats() {
   }, []);
 
   return (
-    <section className="bg-white py-16 px-6">
+  <section className="bg-white pt-15 md:pt-[140px] lg:pt-[190px] mb-20 px-6 bg-[url('/tecno.png')] bg-cover bg-no-repeat bg-center">
       <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-5 text-center">
         {stats.map((stat, index) => (
           <div key={stat.id}>
             <h3
-              className="lg:text-[25px] xl:text-[34px] font-semibold inline-block pb-2 mb-2 border-b-2"
-              style={{ color: "#ADEBCC", borderColor: "#ADEBCC" }}
+              className="font-raleway text-primary-base lg:text-[25px] xl:text-[34px] font-bold inline-block pb-1 pt-2 border-b-2"
             >
               {stat.prefix}
               {formatValue(counts[index])}
               {stat.suffix}
             </h3>
-            <p className="text-[16px] text-[#868C98] max-w-[20ch] mx-auto leading-snug">
+            <p className="text-[16px] text-[#868C98] max-w-[20ch] mx-auto leading-snug mt-2">
               {stat.description}
             </p>
           </div>

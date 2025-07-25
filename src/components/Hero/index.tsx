@@ -3,15 +3,7 @@ import Image from "next/image";
 
 export default function Hero() {
     return (
-        <section
-            className="h-[890px] relative text-white pt-4 pb-0 overflow-visible mb-11 md:mb-35 lg:mb-36"
-            style={{
-                backgroundImage: 'url("/hero.png")',
-                backgroundSize: "cover",
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "top",
-            }}
-        >
+        <section className="h-[890px] relative text-white pt-4 pb-0 overflow-visible bg-[url('/hero.png')] bg-cover bg-no-repeat bg-top">
             {/* Imagem sombra decorativa no fundo */}
             <Image
                 src="/efeito-sombra.png"
@@ -25,7 +17,6 @@ export default function Hero() {
             <div className="relative z-10">
                 {/* Header embutido */}
                 <div className="flex items-center justify-between max-w-7/1 lg:w-[1216px] mx-auto mb-12 px-4 py-[13px]">
-                  
                     {/* Logo + Navbar */}
                     <div className="flex items-center gap-8">
                         {/* Logo */}
@@ -47,10 +38,16 @@ export default function Hero() {
 
                         {/* Navbar */}
                         <nav className="hidden md:flex gap-8 text-sm font-normal lg:ml-[100px]">
-                            <a href="#" className="transition duration-200 hover:text-primary-base">
+                            <a
+                                href="#"
+                                className="transition duration-200 hover:text-primary-base"
+                            >
                                 Como funciona
                             </a>
-                            <a href="#" className="transition duration-200 hover:text-primary-base">
+                            <a
+                                href="#"
+                                className="transition duration-200 hover:text-primary-base"
+                            >
                                 Perguntas frequentes
                             </a>
                         </nav>
@@ -69,7 +66,8 @@ export default function Hero() {
                     </span>
 
                     <h1 className="text-3xl md:text-[70px] font-raleway font-bold leading-tight lg:max-w-[850px] mx-auto mb-6 text-center">
-                    Consulte com médicos particulares com preços ao seu alcance
+                        Consulte com médicos particulares com preços ao seu
+                        alcance
                     </h1>
 
                     <p className="max-w-xl mx-auto text-[18px] md:text-base text-white/90 mb-8">
@@ -82,17 +80,14 @@ export default function Hero() {
                         Quero assinar agora →
                     </button>
                 </div>
-
-                {/* Médicos: agora invadindo o branco com translate */}
-                <div className="flex justify-center relative z-20 -bottom-[60px]">
-                    <Image
-                        src="/medicos/medicos.png"
-                        alt="Médicos Cuidee"
-                        width={1449}
-                        height={292}
-                        priority
-                    />
-                </div>
+                <Image
+                    src="/medicos/medicos.png"
+                    alt="Médicos Cuidee"
+                    width={1449}
+                    height={292}
+                    className="mx-auto mt-[100px]"
+                    priority
+                />
             </div>
         </section>
     );
