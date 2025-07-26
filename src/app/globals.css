@@ -7,3 +7,10 @@
 @import "swiper/css";
 @import "swiper/css/pagination";
 
+.filter-green{
+    filter: invert(46%) sepia(76%) saturate(446%) hue-rotate(125deg) brightness(92%) contrast(90%);
+}
+
+.filter-gray{
+    filter: invert(81%) sepia(10%) saturate(147%) hue-rotate(180deg) brightness(95%) contrast(88%);
+}
