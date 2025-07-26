@@ -4,16 +4,16 @@ import Image from "next/image";
 export default function AppIntroSection() {
   return (
     <section className="bg-white py-16">
-      <div className="max-w-7xl mx-auto px-4 flex flex-col-reverse lg:flex-row items-center justify-between gap-12">
+      <div className="max-w-[1216px] mx-auto px-4 flex flex-col-reverse lg:flex-row items-center justify-between gap-12">
         {/* Texto */}
         <div className="max-w-xl">
-          <p className="text-xs text-gray-700 font-medium uppercase mb-2">
+          <p className="font-inter text-[14px] text-neutral-900 block mb-[16px]">
             Aprovado por mais de 100 mil pacientes
           </p>
 
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+          <h1 className="text-[32px] font-raleway font-bold leading-snug text-gray-900 mb-[16px]">
             Cuidee é a evolução da consulta médico
-          </h2>
+          </h1>
 
           <p className="text-gray-500 text-sm mb-4 leading-relaxed">
             O Cuidee é um aplicativo inovador disponível para PC e smartphones,
