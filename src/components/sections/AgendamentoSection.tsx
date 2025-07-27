@@ -27,7 +27,7 @@ export default function AppointmentSection() {
     const [active, setActive] = useState(0);
 
     return (
-        <section className="max-w-[1216px] mx-auto px-4 py-20 flex flex-col md:flex-row justify-between">
+        <section className="max-w-[1216px] mx-auto px-4 pb-[100px] flex flex-col md:flex-row justify-between">
             {/* Imagem */}
             <div className="flex-1">
                 <img

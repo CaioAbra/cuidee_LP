@@ -30,7 +30,6 @@ export default function RootLayout() {
           <WhatsAppCarousel />
           <AgendamentoSection />
           <AppIntroSection />
-          <HighlightsCarousel />
           <SimpleStepsSection />
           <PricingSection />
           <FaqSection />
