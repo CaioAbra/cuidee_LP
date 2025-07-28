@@ -41,53 +41,44 @@ export default function FaqSection() {
   };
 
   return (
-    <section
-      className="bg-[#F8F9FB] py-20 px-4"
-      style={{
-        backgroundImage: 'url("/Bg-techno.png")',
-        // backgroundColor: "rgba(7, 44, 40, 1)",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "center",
-      }}
-    >
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
+    <section className="bg-[url('/tecno-3.png')] bg-cover pt-[120px] pb-[120px] pl-[32px] pr-[32px]">
+      <div className="max-w-[1216px] mx-auto grid md:grid-cols-2 px-4">
         {/* ESQUERDA */}
         <div className="space-y-6">
           <div>
-            <p className="text-xs uppercase text-gray-500 font-medium">
+            <p className="text-[14px] uppercase text-[#0F172A] font-medium mb-[16px]">
               Preço sem surpresa
             </p>
-            <h2 className="text-2xl md:text-3xl font-bold mt-1 mb-4">
+            <h2 className="font-raleway text-neutral-900 text-[32px] font-bold mb-[16px]">
               Perguntas frequentes
             </h2>
-            <p className="text-gray-500 max-w-sm">
+            <p className="text-neutral-400 text-[16px] max-w-sm mb-[64px]">
               Não achou sua dúvida? Converse com nosso time de especialistas.
             </p>
           </div>
 
           {/* Suporte */}
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col">
             <div className="flex items-center gap-3">
               <Image src="/logo-big.svg" alt="logo" width={48} height={48} />
               <div>
-                <p className="font-medium">Suporte Cartão da saúde</p>
-                <p className="text-green-600 text-sm">• Online agora</p>
+                <p className="font-bold font-raleway text-[18px] text-[#212529]">Suporte Cartão da saúde</p>
+                <p className="font-raleway font-bold text-[#2B8A3E] text-[#2B8A3E] text-[16px]">• Online agora</p>
               </div>
             </div>
 
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 mb-[40px]">
               <Image
                 src="/faq-woman.png"
                 alt="suporte"
-                width={361}
-                height={291}
+                width={361.514}
+                height={291.12}
                 className="rounded-lg"
               />
             </div>
 
             <button
-              className="w-fit border-2 border-Secundary-600 text-Secundary-600 px-5 py-2 rounded-md font-medium hover:bg-Secundary-600 hover:text-white transition flex items-center gap-2"
+              className="w-fit border-[1px] border-Secundary-600 text-Secundary-600 text-[14px] px-8 py-4 rounded-[6px] font-medium flex items-center gap-2"
             >
               <FaWhatsapp className="text-xl" />
               Conversar com a equipe
@@ -100,19 +91,19 @@ export default function FaqSection() {
           {faqs.map((item, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow px-6 py-4 cursor-pointer"
+              className="bg-white rounded-lg shadow p-[32px] cursor-pointer"
               onClick={() => toggle(index)}
             >
               <div className="flex justify-between items-center">
-                <p className="font-medium text-gray-900">{item.question}</p>
-                <ChevronUpIcon
-                  className={`h-5 w-5 text-white transform transition duration-300 bg-primary-base rounded-lg ${
+                <p className="font-raleway font-bold text-[#18171D] text-[18px]">{item.question}</p>
+                <img src="/section-cursor.svg"
+                  className={`w-[32px] h-[32px] ${
                     activeIndex === index ? "rotate-180" : ""
                   }`}
                 />
               </div>
               {activeIndex === index && item.answer && (
-                <p className="text-sm text-gray-500 mt-3">{item.answer}</p>
+                <p className="text-[16px] text-neutral-400 mt-3">{item.answer}</p>
               )}
             </div>
           ))}

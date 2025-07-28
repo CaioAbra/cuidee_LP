@@ -9,6 +9,7 @@ const config = {
       fontFamily: {
         sans: ["Inter", ...fontFamily.sans],
         raleway: ["Raleway", ...fontFamily.sans],
+        poppins: ["Poppins", ...fontFamily.sans],
       },
       colors: {
         primary: {

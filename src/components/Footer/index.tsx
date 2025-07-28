@@ -3,9 +3,9 @@ import { FaInstagram, FaFacebookF } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0C3632] text-white mt-12 pt-12">
+    <footer className="bg-[#0C3632] text-white pt-[150px]">
       {/* Seção superior */}
-      <div className="relative bg-[#36544F] rounded-[20px] mx-6 lg:mx-20 px-8 py-12 lg:py-10 overflow-visible lg:mt-32">
+      <div className="relative max-w-[1216px] bg-[#36544F] rounded-[20px] mx-auto px-[112px] py-[32px] overflow-visible mb-[48px]">
         <div className="relative z-10 max-w-xl space-y-6">
           <p className="text-sm text-white/70">
             Leve saúde e economia no seu bolso
@@ -19,19 +19,19 @@ export default function Footer() {
               src="/appstore.png"
               alt="App Store"
               width={130}
-              height={40}
+              height={130}
             />
             <Image
               src="/playstore.png"
               alt="Play Store"
               width={130}
-              height={40}
+              height={130}
             />
           </div>
         </div>
 
         {/* Mockup do app fora do container */}
-        <div className="hidden lg:block absolute right-0 bottom-0 z-0">
+        <div className="hidden lg:block absolute right-[112px] bottom-0 z-0">
           <Image
             src="/mockup-app-cuidee.png"
             alt="App Cuidee"
@@ -43,7 +43,7 @@ export default function Footer() {
       </div>
 
       {/* Seção de links */}
-      <div className="px-6 lg:px-20 py-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 border-b border-white/20 text-sm text-white">
+      <div className="max-w-[1216px] mx-auto px-6 lg:px-20 py-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 border-b border-white/20 text-sm text-white">
         <div>
           <h4 className="font-bold mb-2">Sou paciente</h4>
           <ul className="space-y-1 text-white/70">
