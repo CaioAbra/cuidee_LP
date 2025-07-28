@@ -1,19 +1,30 @@
 "use client";
-import Image from "next/image";
+import { useRouter } from "next/navigation";
+import instance from "@/api";
+import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
-const slides = [
-    "/carrossel/slide-1.png",
-    "/carrossel/slide-2.png",
-    "/carrossel/slide-3.png",
-    "/carrossel/slide-4.png",
-    "/carrossel/slide-5.png",
-];
-
 export default function WhatsAppCarousel() {
+    const router = useRouter();
+    const [slides, setSlides] = useState<any[]>([]);
+
+    useEffect(() => {
+        async function fechApi() {
+            try {
+                const { data } = await instance.get(
+                    "/SiteAberto/get-banner-site"
+                );
+                setSlides(data);
+            } catch (err) {
+                console.error("Erro ao carregar bannners:", err);
+            }
+        }
+        fechApi();
+    }, []);
+
     return (
         <div className="max-w-[1216px] mx-auto px-4 pb-[80px] md:pb-[100px]">
             <Swiper
@@ -28,8 +39,11 @@ export default function WhatsAppCarousel() {
             >
                 {slides.map((src, index) => (
                     <SwiperSlide key={index}>
-                        <Image
-                            src={src}
+                        <img
+                            src={src?.foto}
+                            onClick={() => {
+                                router.push(src?.urlRedirecionamento);
+                            }}
                             alt={`Slide ${index + 1}`}
                             width={1440}
                             height={340}

@@ -1,5 +1,6 @@
 "use client";
-import { useState } from "react";
+import instance from "@/api";
+import { useState, useEffect } from "react";
 import { FaBolt, FaPlus, FaMobileAlt } from "react-icons/fa";
 
 const items = [
@@ -25,6 +26,21 @@ const items = [
 
 export default function AppointmentSection() {
     const [active, setActive] = useState(0);
+    const [textos, setTextos] = useState<any[]>([]);
+
+    useEffect(() => {
+        async function fechApi() {
+            try {
+                const { data } = await instance.get(
+                    "/SiteAberto/get-textos-site"
+                );
+                setTextos(data);
+            } catch (err) {
+                console.error("Erro ao carregar textos:", err);
+            }
+        }
+        fechApi();
+    }, []);
 
     return (
         <section className="max-w-[1216px] mx-auto px-4 pb-[80px] md:pb-[100px] flex flex-col md:flex-row justify-between gap-10 lg:gap-0">
@@ -44,7 +60,7 @@ export default function AppointmentSection() {
                     consultas
                 </span>
                 <h4 className="text-[32px] font-raleway font-bold leading-snug text-gray-900 mb-[40px]">
-                    Agenda de consultas particulares com preços diferenciados
+                    {textos.find((value) => value.id === "TITULO1")?.texto}
                 </h4>
 
                 <div className="flex gap-6 mb-[40px]">

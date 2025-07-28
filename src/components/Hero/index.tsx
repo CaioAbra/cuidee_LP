@@ -1,7 +1,25 @@
 "use client";
+import { useEffect, useState } from "react";
 import Image from "next/image";
+import instance from "@/api";
 
 export default function Hero() {
+    const [textos, setTextos] = useState<any[]>([]);
+
+    useEffect(() => {
+        async function fechApi() {
+            try {
+                const { data } = await instance.get(
+                    "/SiteAberto/get-textos-site"
+                );
+                setTextos(data);
+            } catch (err) {
+                console.error("Erro ao carregar textos:", err);
+            }
+        }
+        fechApi();
+    }, []);
+
     return (
         <section className="h-auto lg:h-[890px] relative text-white pt-4 pb-0 overflow-visible bg-[url('/hero-mobile.png')] bg-cover bg-no-repeat bg-top md:bg-[url('/hero.png')]">
             {/* Imagem sombra decorativa no fundo */}
@@ -64,14 +82,14 @@ export default function Hero() {
                     </span>
 
                     <h1 className="text-3xl md:text-[70px] font-raleway font-bold leading-tight lg:max-w-[850px] mx-auto mb-6 text-center">
-                        Consulte com médicos particulares com preços ao seu
-                        alcance
+                        {textos.find((value) => value.id === "TITULO")?.texto}
                     </h1>
 
                     <p className="max-w-xl mx-auto text-[18px] md:text-base text-white/90 mb-8">
-                        Agende sua consulta particular de forma rápida e fácil.
-                        Com o Cartão da Saúde, você paga menos e cuida da sua
-                        saúde sem complicação.
+                        {
+                            textos.find((value) => value.id === "SUBTITULO")
+                                ?.texto
+                        }
                     </p>
 
                     <button className="bg-white text-primary-dark font-medium px-[24px] py-[14px] rounded-md hover:bg-gray-100 transition">

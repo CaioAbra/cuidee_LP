@@ -1,8 +1,25 @@
 "use client";
 import Image from "next/image";
-import { CheckCircle } from "lucide-react";
+import instance from "@/api";
+import { useState, useEffect } from "react";
 
 export default function SimpleStepsSection() {
+    const [textos, setTextos] = useState<any[]>([]);
+
+    useEffect(() => {
+        async function fechApi() {
+            try {
+                const { data } = await instance.get(
+                    "/SiteAberto/get-textos-site"
+                );
+                setTextos(data);
+            } catch (err) {
+                console.error("Erro ao carregar textos:", err);
+            }
+        }
+        fechApi();
+    }, []);
+
     return (
         <section className="bg-[url('/bg-simple.png')] text-white py-[120px] px-[32px]">
             <div className="max-w-[1216px] mx-auto px-4 flex flex-col md:flex-row items-center gap-[80px]">
@@ -23,14 +40,10 @@ export default function SimpleStepsSection() {
                         Aprovado por mais de 100 mil pacientes
                     </span>
                     <h2 className="text-[32px] font-raleway font-bold text-white mb-[16px] leading-[38px]">
-                        Veja como é simples marcar uma consulta!
+                        {textos.find((value) => value.id === "TITULO3")?.texto}
                     </h2>
                     <p className="text-neutral-300 text-[16px] mb-[48px] max-w-xl">
-                        Quer encontrar médicos e economizar em consultas?
-                        Assista ao vídeo ao lado! Com o Cartão da Saúde, você
-                        agenda em tempo real, aproveita descontos em farmácias e
-                        acessa sua carteirinha digital com facilidade. Já são
-                        mais de 100 mil usuários simplificando a vida. Confira!
+                        {textos.find((value) => value.id === "TEXTO2")?.texto}
                     </p>
 
                     <ul>

@@ -1,8 +1,24 @@
 "use client";
 import Image from "next/image";
 import { FaInstagram, FaFacebookF } from "react-icons/fa";
+import instance from "@/api";
+import { useState, useEffect } from "react";
 
 export default function Footer() {
+  const [textos, setTextos] = useState<any[]>([]);
+
+  useEffect(() => {
+      async function fechApi() {
+          try {
+              const { data } = await instance.get("/SiteAberto/get-textos-site");
+              setTextos(data);
+          } catch (err) {
+              console.error("Erro ao carregar textos:", err);
+          }
+      }
+      fechApi();
+  }, []);
+
   return (
     <footer className="bg-[#0C3632] text-white pt-[80px] md:pt-[150px]">
       {/* Seção superior */}
@@ -12,8 +28,7 @@ export default function Footer() {
             Leve saúde e economia no seu bolso
           </p>
           <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-white leading-snug">
-            Baixe o app Cuidee e agende consultas particulares com preços
-            diferenciados.
+              {textos.find((value) => value.id === "TITULO4")?.texto}
           </h2>
           <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 mt-6">
             <Image
