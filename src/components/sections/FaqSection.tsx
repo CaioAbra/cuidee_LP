@@ -41,8 +41,8 @@ export default function FaqSection() {
   };
 
   return (
-    <section className="bg-[url('/tecno-3.png')] bg-cover pt-[120px] pb-[120px] pl-[32px] pr-[32px]">
-      <div className="max-w-[1216px] mx-auto grid md:grid-cols-2 px-4">
+    <section className="bg-[url('/tecno-3.png')] bg-cover md:pt-[120px] pb-[80px] md:pb-[120px] pl-[32px] pr-[32px]">
+      <div className="max-w-[1216px] mx-auto grid md:grid-cols-2 px-4 gap-10 md:gap-0">
         {/* ESQUERDA */}
         <div className="space-y-6">
           <div>

@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function AppIntroSection() {
   return (
-    <section className="bg-white py-16 pb-[120px]">
+    <section className="bg-white md:py-16 pb-[80px] md:pb-[120px]">
       <div className="max-w-[1216px] mx-auto px-4 flex flex-col-reverse lg:flex-row items-center justify-between gap-12">
         {/* Texto */}
         <div className="max-w-xl">

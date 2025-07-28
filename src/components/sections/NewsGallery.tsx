@@ -13,7 +13,7 @@ const images = [
 
 export default function CuideeInformaSection() {
   return (
-<section className="pt-[100px] pb-[100px] px-4">
+<section className="pt-[80px] md:pt-[100px] pb-[80px] md:pb-[100px] px-4">
   <h2 className="font-raleway text-center text-neutral-600 text-[32px] font-bold mb-[32px]">
     Cuidee informa
   </h2>

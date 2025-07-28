@@ -57,23 +57,24 @@ export default function Stats() {
   }, []);
 
   return (
-  <section className="bg-white pt-15 md:pt-[140px] lg:pt-[190px] pb-[64px] px-6 bg-[url('/tecno.png')] bg-cover bg-no-repeat bg-top">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-5 text-center">
-        {stats.map((stat, index) => (
-          <div key={stat.id}>
-            <h3
-              className="font-raleway text-primary-base lg:text-[25px] xl:text-[34px] font-bold inline-block pb-1 pt-2 border-b-2"
-            >
-              {stat.prefix}
-              {formatValue(counts[index])}
-              {stat.suffix}
-            </h3>
-            <p className="text-[16px] text-[#868C98] max-w-[20ch] mx-auto leading-snug mt-2">
-              {stat.description}
-            </p>
-          </div>
-        ))}
-      </div>
-    </section>
+  <section className="bg-white pt-12 md:pt-[140px] lg:pt-[190px] pb-[64px] px-6 bg-[url('/tecno.png')] bg-cover bg-no-repeat bg-top">
+    <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-8 text-center">
+      {stats.map((stat, index) => (
+        <div key={stat.id} className="flex flex-col items-center">
+          <h3
+            className="font-raleway text-primary-base text-[18px] sm:text-[20px] md:text-[25px] lg:text-[28px] font-bold inline-block pb-1 border-b-2 border-primary-base"
+          >
+            {stat.prefix}
+            {formatValue(counts[index])}
+            {stat.suffix}
+          </h3>
+          <p className="text-[14px] sm:text-[15px] md:text-[16px] text-[#868C98] max-w-[20ch] mx-auto leading-snug mt-2">
+            {stat.description}
+          </p>
+        </div>
+      ))}
+    </div>
+  </section>
+
   );
 }

@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Hero() {
     return (
-        <section className="h-[890px] relative text-white pt-4 pb-0 overflow-visible bg-[url('/hero.png')] bg-cover bg-no-repeat bg-top">
+        <section className="h-auto lg:h-[890px] relative text-white pt-4 pb-0 overflow-visible bg-[url('/hero-mobile.png')] bg-cover bg-no-repeat bg-top md:bg-[url('/hero.png')]">
             {/* Imagem sombra decorativa no fundo */}
             <Image
                 src="/efeito-sombra.png"
@@ -16,23 +16,21 @@ export default function Hero() {
             {/* Conteúdo */}
             <div className="relative z-10">
                 {/* Header embutido */}
-                <div className="flex items-center justify-between max-w-7/1 lg:w-[1216px] mx-auto mb-12 px-4 py-[13px]">
+                <div className="flex items-center justify-between max-w-7/1 lg:w-[1216px] mx-auto mb-12 px-5 py-[13px]">
                     {/* Logo + Navbar */}
                     <div className="flex items-center gap-8">
                         {/* Logo */}
                         <div className="flex items-center gap-4">
-                            <Image
+                            <img
                                 src="/logo-cuidee.svg"
                                 alt="Cuidee"
-                                width={145}
-                                height={32}
+                                className="w-32 md:w-[145px] md:h-[32px]"
                             />
                             <span className="text-white/40">|</span>
-                            <Image
+                            <img
                                 src="/logo-crmpr.svg"
                                 alt="CRM-PR"
-                                width={150}
-                                height={25}
+                                className="w-32 md:w-[145px] md:h-[32px]"
                             />
                         </div>
 
@@ -54,13 +52,13 @@ export default function Hero() {
                     </div>
 
                     {/* Botão */}
-                    <button className="border border-white text-white text-sm px-[24px] py-[10px] rounded-md -mt-1">
+                    <button className="hidden border border-white text-white text-sm px-[24px] py-[10px] rounded-md -mt-1 md:block">
                         Área logada
                     </button>
                 </div>
 
                 {/* Hero principal */}
-                <div className="text-center px-4 mb-10 mt-20">
+                <div className="text-center px-5 mb-10 mt-10 md:mt-20">
                     <span className="inline-block bg-white/10 px-4 py-1 rounded-full text-md uppercase mb-4 tracking-widest">
                         Seja bem vindo
                     </span>
@@ -80,13 +78,15 @@ export default function Hero() {
                         Quero assinar agora →
                     </button>
                 </div>
-                <Image
+                <img
                     src="/medicos/medicos.png"
                     alt="Médicos Cuidee"
-                    width={1449}
-                    height={292}
-                    className="mx-auto mt-[100px]"
-                    priority
+                    className="hidden md:block mx-auto mt-[100px] md:w-[1449px] md:h-[292px]"
+                />
+                <img
+                    src="/medicos/medicos-mobile.png"
+                    alt="Médicos Cuidee"
+                    className="block md:hidden mx-auto mt-[50px] w-full pb-[40px]"
                 />
             </div>
         </section>
