@@ -31,7 +31,7 @@ export default function FaqSection() {
         <section className="bg-[url('/tecno-3.png')] bg-cover md:pt-[120px] pb-[80px] md:pb-[120px] pl-[32px] pr-[32px]">
             <div className="max-w-[1216px] mx-auto grid md:grid-cols-2 px-4 gap-10 md:gap-0">
                 {/* ESQUERDA */}
-                <div className="space-y-6">
+                <div className="space-y-9">
                     <div>
                         <p className="text-[14px] uppercase text-[#0F172A] font-medium mb-[16px]">
                             Preço sem surpresa
@@ -86,7 +86,7 @@ export default function FaqSection() {
                     {faq.map((item, index) => (
                         <div
                             key={index}
-                            className="bg-white rounded-lg shadow p-[32px] cursor-pointer"
+                            className="bg-white rounded-2xl shadow p-[32px] cursor-pointer"
                             onClick={() => toggle(index)}
                         >
                             <div className="flex justify-between items-center">
