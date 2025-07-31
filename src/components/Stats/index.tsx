@@ -2,79 +2,88 @@
 import { useEffect, useState } from "react";
 
 const stats = [
-  {
-    id: 1,
-    value: 20,
-    suffix: " anos",
-    prefix: "+ de ",
-    description: "Levando saúde e confiança aos pacientes.",
-  },
-  {
-    id: 2,
-    value: 8000000,
-    suffix: "",
-    prefix: "+ ",
-    description: "de usuários satisfeitos com a nossa plataforma.",
-  },
-  {
-    id: 3,
-    value: 19000,
-    suffix: "",
-    prefix: "+ de ",
-    description: "Médicos prontos para atender você.",
-  },
-  {
-    id: 4,
-    value: 10000000,
-    suffix: "",
-    prefix: "+ de ",
-    description: "de consultas realizadas com sucesso.",
-  },
+    {
+        id: 1,
+        value: 20,
+        suffix: " anos",
+        prefix: "+ de ",
+        description: "Levando saúde e confiança aos pacientes.",
+    },
+    {
+        id: 2,
+        value: 8000000,
+        suffix: "",
+        prefix: "+ ",
+        description: "de usuários satisfeitos com a nossa plataforma.",
+    },
+    {
+        id: 3,
+        value: 19000,
+        suffix: "",
+        prefix: "+ de ",
+        description: "Médicos prontos para atender você.",
+    },
+    {
+        id: 4,
+        value: 10000000,
+        suffix: "",
+        prefix: "+ de ",
+        description: "De consultas realizadas com sucesso.",
+    },
 ];
 
 function formatValue(value: number): string {
-  if (value >= 1000000) return `${Math.floor(value / 1000000)} milhões`;
-  if (value >= 1000) return `${Math.floor(value / 1000)} mil`;
-  return value.toString();
+    if (value >= 1000000) return `${Math.floor(value / 1000000)} milhões`;
+    if (value >= 1000) return `${Math.floor(value / 1000)} mil`;
+    return value.toString();
 }
 
 export default function Stats() {
-  const [counts, setCounts] = useState(stats.map(() => 0));
+    const [counts, setCounts] = useState(stats.map(() => 0));
 
-  useEffect(() => {
-    const intervals = stats.map((stat, index) => {
-      const increment = Math.ceil(stat.value / 50);
-      return setInterval(() => {
-        setCounts((prev) => {
-          const next = [...prev];
-          next[index] = Math.min(next[index] + increment, stat.value);
-          return next;
+    useEffect(() => {
+        const intervals = stats.map((stat, index) => {
+            const increment = Math.ceil(stat.value / 50);
+            return setInterval(() => {
+                setCounts((prev) => {
+                    const next = [...prev];
+                    next[index] = Math.min(next[index] + increment, stat.value);
+                    return next;
+                });
+            }, 30);
         });
-      }, 30);
-    });
 
-    return () => intervals.forEach(clearInterval);
-  }, []);
+        return () => intervals.forEach(clearInterval);
+    }, []);
 
-  return (
-  <section className="bg-white pt-12 md:pt-[140px] lg:pt-[190px] pb-[64px] px-6 bg-[url('/tecno.png')] bg-cover bg-no-repeat bg-top">
-    <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-8 text-center">
-      {stats.map((stat, index) => (
-        <div key={stat.id} className="flex flex-col items-center">
-          <h3
-            className="font-raleway text-primary-base text-[18px] sm:text-[20px] md:text-[25px] lg:text-[28px] font-bold inline-block pb-1 border-b-2 border-primary-base"
-          >
-            {stat.prefix}
-            {formatValue(counts[index])}
-            {stat.suffix}
-          </h3>
-          <p className="text-[14px] sm:text-[15px] md:text-[16px] text-[#868C98] max-w-[20ch] mx-auto leading-snug mt-2">
-            {stat.description}
-          </p>
-        </div>
-      ))}
-    </div>
-  </section>
+    return (
+        <section className="bg-white pt-[70px] md:pt-[100px] lg:pt-[200px] px-8 bg-[url('/tecno.png')] bg-contain bg-no-repeat bg-top">
+            <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-8 text-center">
+                {stats.map((stat, index) => (
+                    <div key={stat.id} className="flex flex-col items-center">
+                        <h3
+                            className="font-raleway text-primary-base text-center text-[18px] leading-[22px] tracking-[-0.18px] font-bold not-italic inline-block pb-3 border-b-2 border-primary-base sm:text-[24px] sm:leading-[28px] sm:tracking-[-0.24px] md:text-[30px] md:leading-[34px] md:tracking-[-0.28px] lg:text-[34px] lg:leading-[38px] lg:tracking-[-0.34px]"
+                            style={{
+                                fontFeatureSettings: "'ss11' on, 'cv09' on, 'liga' off, 'calt' off",
+                                fontVariantNumeric: "lining-nums proportional-nums",
+                            }}
+                        >
+                            {stat.prefix}
+                            {formatValue(counts[index])}
+                            {stat.suffix}
+                        </h3>
 
-  );
+                        <p
+                            className="mt-[10px] self-stretch font-inter text-neutral-400 text-center text-[16px] leading-[24px] tracking-[-0.176px] font-normal not-italic sm:text-[17px] sm:leading-[25px] md:text-[18px] md:leading-[27px]"
+                            style={{
+                                fontFeatureSettings: "'ss11' on, 'cv09' on, 'liga' off, 'calt' off",
+                            }}
+                        >
+                            {stat.description}
+                        </p>
+                    </div>
+                ))}
+            </div>
+        </section>
+    );
 }

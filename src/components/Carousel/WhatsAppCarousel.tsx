@@ -26,7 +26,7 @@ export default function WhatsAppCarousel() {
     }, []);
 
     return (
-        <div className="max-w-[1216px] mx-auto px-4 pb-[80px] md:pb-[100px]">
+        <div className="max-w-[1216px] mx-auto px-8 pt-[60px]">
             <Swiper
                 modules={[Autoplay, Pagination]}
                 loop={true}
