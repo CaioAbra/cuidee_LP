@@ -74,7 +74,7 @@ export default function Stats() {
                         </h3>
 
                         <p
-                            className="mt-[10px] px-10 self-stretch font-inter text-neutral-400 text-center text-[16px] leading-[24px] tracking-[-0.176px] font-normal not-italic sm:text-[17px] sm:leading-[25px] md:text-[16px] md:leading-[27px]"
+                            className="mt-[10px] px-10 self-stretch font-inter text-neutral-400 text-center text-[14px] leading-[23px] tracking-[-0.176px] font-normal not-italic sm:text-[17px] sm:leading-[25px] md:text-[16px] md:leading-[27px]"
                             style={{
                                 fontFeatureSettings: "'ss11' on, 'cv09' on, 'liga' off, 'calt' off",
                             }}

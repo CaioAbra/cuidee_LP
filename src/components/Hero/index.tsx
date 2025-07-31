@@ -5,6 +5,7 @@ import instance from "@/api";
 
 export default function Hero() {
     const [textos, setTextos] = useState<any[]>([]);
+    const [scrolled, setScrolled] = useState(false);
 
     useEffect(() => {
         async function fechApi() {
@@ -16,6 +17,13 @@ export default function Hero() {
             }
         }
         fechApi();
+
+        // Monitora o scroll
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 300);
+        };
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
     return (
@@ -32,39 +40,55 @@ export default function Hero() {
             {/* Conteúdo */}
             <div className="relative z-10">
                 {/* Header embutido */}
-                <div className="flex items-center justify-between max-w-7/1 lg:w-[1216px] mx-auto mb-12 px-[24px] md:px-8 py-[13px]">
-                    {/* Logo + Navbar */}
-                    <div className="flex items-center gap-8">
-                        {/* Logo */}
-                        <div>
-                            <img src="/logo-cuidee-crm.png" alt="Cuidee" />
+                <div
+                    className={`w-full z-50 transition-all duration-110 ${
+                        scrolled ? "md:fixed md:top-0 md:left-0 md:bg-white md:text-neutral-900 md:shadow-md" : "bg-transparent text-white"
+                    }`}
+                >
+                    {" "}
+                    <div className="flex items-center justify-between max-w-[1216px] mx-auto px-[24px] md:px-8 py-[13px]">
+                        {/* Logo + Navbar */}
+                        <div className="flex items-center gap-8">
+                            {/* Logo */}
+                            <div>
+                                <img src="/logo-cuidee-crm.png" alt="Cuidee" />
+                            </div>
+
+                            {/* Navbar */}
+                            <nav className="hidden md:flex gap-8 text-sm font-normal absolute left-1/2 -translate-x-1/2">
+                                <a
+                                    href="#"
+                                    className="font-inter text-[16px] not-italic font-normal leading-[24px] tracking-[-0.176px] transition duration-200 hover:text-primary-base"
+                                >
+                                    Como funciona
+                                </a>
+                                <a
+                                    href="#"
+                                    className="font-inter text-[16px] not-italic font-normal leading-[24px] tracking-[-0.176px] transition duration-200 hover:text-primary-base"
+                                >
+                                    Perguntas frequentes
+                                </a>
+                            </nav>
                         </div>
 
-                        {/* Navbar */}
-                        <nav className="hidden md:flex gap-8 text-sm font-normal absolute left-1/2 -translate-x-1/2">
-                            <a
-                                href="#"
-                                className="font-inter text-[16px] not-italic font-normal leading-[24px] tracking-[-0.176px] transition duration-200 hover:text-primary-base"
-                            >
-                                Como funciona
-                            </a>
-                            <a
-                                href="#"
-                                className="font-inter text-[16px] not-italic font-normal leading-[24px] tracking-[-0.176px] transition duration-200 hover:text-primary-base"
-                            >
-                                Perguntas frequentes
-                            </a>
-                        </nav>
+                        {/* Botão */}
+                        <button
+                            className={`hidden md:flex items-center justify-center gap-1 px-[24px] py-[10px] text-sm font-normal rounded-lg shadow-[0_1px_2px_rgba(82,88,102,0.06)] transition-colors duration-300 
+                                ${ scrolled ? 
+                                    "md:border md:border-neutral-300 md:text-neutral-900 md:bg-white md:hover:bg-neutral-100" 
+                                    : "md:border md:border-white md:text-white md:bg-transparent md:hover:bg-white md:hover:text-neutral-900"
+                                }
+                            `}
+                        >
+                            Área logada
+                        </button>
                     </div>
-
-                    {/* Botão */}
-                    <button className="hidden md:flex items-center justify-center gap-1 px-[24px] py-[10px] text-sm font-normal text-white border border-neutral-0 rounded-lg shadow-[0_1px_2px_rgba(82,88,102,0.06)] active:bg-white active:text-neutral-700">
-                        Área logada
-                    </button>
                 </div>
 
                 {/* Hero principal */}
-                <div className="text-center px-[24px] md:px-8 mb-10 mt-10 md:mt-20">
+                <div className={`text-center px-[24px] md:px-8 mb-10 ${
+                    scrolled ? "mt-[50px] md:mt-[150px]" : "mt-[50px] md:mt-[80px]"
+                }`}>
                     <span
                         className="font-inter inline-flex items-center justify-center gap-[10px] px-4 py-1 rounded-[12px] bg-[#3A5D59] text-[14px] leading-[20px] tracking-[-0.084px] font-inter font-medium not-italic uppercase text-white text-center mb-[12px]"
                         style={{
@@ -93,16 +117,8 @@ export default function Hero() {
                         Quero assinar agora <img src="/arrow.svg" alt="arrow" className="w-4 h-4" />
                     </button>
                 </div>
-                <img
-                    src="/medicos/medicos.png"
-                    alt="Médicos Cuidee"
-                    className="hidden md:block mx-auto mt-[100px] md:w-[1449px] md:h-[292px]"
-                />
-                <img
-                    src="/medicos/medicos-mobile.png"
-                    alt="Médicos Cuidee"
-                    className="block md:hidden mx-auto mt-[50px] w-full pb-[50px]"
-                />
+                <img src="/medicos/medicos.png" alt="Médicos Cuidee" className="hidden md:block mx-auto mt-[100px] md:w-[1449px] md:h-[292px]" />
+                <img src="/medicos/medicos-mobile.png" alt="Médicos Cuidee" className="block md:hidden mx-auto mt-[50px] w-full pb-[50px]" />
             </div>
         </section>
     );
