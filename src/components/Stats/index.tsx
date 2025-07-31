@@ -57,7 +57,7 @@ export default function Stats() {
     }, []);
 
     return (
-        <section className="bg-white pt-[70px] md:pt-[100px] lg:pt-[200px] px-8 bg-[url('/tecno.png')] bg-contain bg-no-repeat bg-top">
+        <section className="bg-white pt-[56px] md:pt-[100px] lg:pt-[200px] px-[24px] md:px-8 bg-[url('/tecno.png')] bg-contain bg-no-repeat bg-top">
             <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-8 text-center">
                 {stats.map((stat, index) => (
                     <div key={stat.id} className="flex flex-col items-center">

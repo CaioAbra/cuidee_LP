@@ -32,7 +32,7 @@ export default function Hero() {
             {/* Conteúdo */}
             <div className="relative z-10">
                 {/* Header embutido */}
-                <div className="flex items-center justify-between max-w-7/1 lg:w-[1216px] mx-auto mb-12 px-8 lg:px-10 py-[13px]">
+                <div className="flex items-center justify-between max-w-7/1 lg:w-[1216px] mx-auto mb-12 px-[24px] md:px-8 py-[13px]">
                     {/* Logo + Navbar */}
                     <div className="flex items-center gap-8">
                         {/* Logo */}
@@ -64,7 +64,7 @@ export default function Hero() {
                 </div>
 
                 {/* Hero principal */}
-                <div className="text-center px-8 lg:px-5 mb-10 mt-10 md:mt-20">
+                <div className="text-center px-[24px] md:px-8 mb-10 mt-10 md:mt-20">
                     <span
                         className="font-inter inline-flex items-center justify-center gap-[10px] px-4 py-1 rounded-[12px] bg-[#3A5D59] text-[14px] leading-[20px] tracking-[-0.084px] font-inter font-medium not-italic uppercase text-white text-center mb-[12px]"
                         style={{

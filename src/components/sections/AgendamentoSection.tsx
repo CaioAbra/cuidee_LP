@@ -43,7 +43,7 @@ export default function AppointmentSection() {
     }, []);
 
     return (
-        <section className="max-w-[1216px] mx-auto px-8 pt-[50px] md:pt-[100px] flex flex-col md:flex-row justify-between gap-10 lg:gap-0">
+        <section className="max-w-[1216px] mx-auto px-[24px] md:px-8 pt-[56px] md:pt-[100px] flex flex-col md:flex-row justify-between gap-10 lg:gap-[120px] ">
             {/* Imagem */}
             <div className="flex-1">
                 <img
