@@ -62,7 +62,7 @@ export default function Stats() {
                 {stats.map((stat, index) => (
                     <div key={stat.id} className="flex flex-col items-center">
                         <h3
-                            className="font-raleway text-primary-base text-center text-[18px] leading-[22px] tracking-[-0.18px] font-bold not-italic inline-block pb-3 border-b-2 border-primary-base sm:text-[24px] sm:leading-[28px] sm:tracking-[-0.24px] md:text-[30px] md:leading-[34px] md:tracking-[-0.28px] lg:text-[34px] lg:leading-[38px] lg:tracking-[-0.34px]"
+                            className="font-raleway text-primary-base text-center text-[18px] leading-[22px] tracking-[-0.18px] font-bold not-italic inline-block pb-3 border-b-2 border-primary-light sm:text-[24px] sm:leading-[28px] sm:tracking-[-0.24px] md:text-[30px] md:leading-[34px] md:tracking-[-0.28px] lg:text-[34px] lg:leading-[38px] lg:tracking-[-0.34px]"
                             style={{
                                 fontFeatureSettings: "'ss11' on, 'cv09' on, 'liga' off, 'calt' off",
                                 fontVariantNumeric: "lining-nums proportional-nums",
@@ -74,7 +74,7 @@ export default function Stats() {
                         </h3>
 
                         <p
-                            className="mt-[10px] self-stretch font-inter text-neutral-400 text-center text-[16px] leading-[24px] tracking-[-0.176px] font-normal not-italic sm:text-[17px] sm:leading-[25px] md:text-[18px] md:leading-[27px]"
+                            className="mt-[10px] px-10 self-stretch font-inter text-neutral-400 text-center text-[16px] leading-[24px] tracking-[-0.176px] font-normal not-italic sm:text-[17px] sm:leading-[25px] md:text-[16px] md:leading-[27px]"
                             style={{
                                 fontFeatureSettings: "'ss11' on, 'cv09' on, 'liga' off, 'calt' off",
                             }}

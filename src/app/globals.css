@@ -15,3 +15,25 @@
 .filter-gray{
     filter: invert(81%) sepia(10%) saturate(147%) hue-rotate(180deg) brightness(95%) contrast(88%);
 }
+
+/*Animation*/
+.animation-enter{
+  opacity: 0;
+  transform: translateY(30px) scale(0.95);
+  animation: animation-enter 0.5s ease-out forwards;
+}
+
+@keyframes animation-enter {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-5px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
