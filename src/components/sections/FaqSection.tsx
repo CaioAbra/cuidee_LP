@@ -29,7 +29,7 @@ export default function FaqSection() {
 
     return (
         <section className="bg-[url('/tecno-3.png')] bg-cover md:pt-[120px] pb-[80px] md:pb-[120px] pl-[32px] pr-[32px]">
-            <div className="max-w-[1216px] mx-auto grid md:grid-cols-2 px-4 gap-10 md:gap-0">
+            <div className="max-w-[1216px] mx-auto grid grid-cols-2 justify-center items-start">
                 {/* ESQUERDA */}
                 <div className="space-y-9">
                     <div>
@@ -39,7 +39,7 @@ export default function FaqSection() {
                         <h2 className="font-raleway text-neutral-900 text-[32px] font-bold mb-[16px]">
                             Perguntas frequentes
                         </h2>
-                        <p className="text-neutral-400 text-[16px] max-w-sm mb-[64px]">
+                        <p className="text-neutral-400 text-[16px] mb-[64px]">
                             Não achou sua dúvida? Converse com nosso time de
                             especialistas.
                         </p>
@@ -64,17 +64,57 @@ export default function FaqSection() {
                             </div>
                         </div>
 
-                        <div className="flex items-center gap-4 mb-[40px]">
-                            <Image
-                                src="/faq-woman.png"
-                                alt="suporte"
-                                width={361.514}
-                                height={291.12}
-                                className="rounded-lg"
+                        {/* FAQ ATENDIMENTO */}
+                        <div className="max-w-[361.514px] max-h-[291.12px] relative">
+                            <img
+                                src="https://img.freepik.com/fotos-gratis/giggly-mulher-usando-fone-de-ouvido-e-segurando-laptop_23-2148434738.jpg"
+                                className="rounded-xl"
                             />
-                        </div>
+                            <div className="w-[275px] h-[250px] bg-white absolute -top-[30px] -right-[46.486px] flex items-center rounded-2xl shadow-md p-8">
+                                <div className="block">
+                                    <p className="font-inter text-[#212529] text-[16px] font-bold leading-[20px] tracking-[-0.14px]">
+                                        Atendimento das
+                                        <span className="block">
+                                            <span className="text-[#F9A817] text-[16px] font-bold leading-[20px] tracking-[-0.16px]">
+                                                08:30
+                                            </span>
+                                            {" "}às{" "}
+                                            <span className="text-[#F9A817] text-[16px] font-bold leading-[20px] tracking-[-0.16px]">
+                                                18:00
+                                            </span>
+                                        </span>
+                                    </p>
 
-                        <button className="w-fit border-[1px] border-Secundary-600 text-Secundary-600 text-[14px] px-8 py-4 rounded-[6px] font-medium flex items-center gap-2">
+                                    <div className="mt-[14px]">
+                                        <p className="font-inter text-[#868E96] text-[14px] font-medium leading-[16px] mb-[7px]">
+                                            Curitiba e região metropolitana:
+                                        </p>
+                                        <div className="flex gap-[10.66px]">
+                                            <img src="/whatsapp.svg" alt="whatsapp" />
+                                            <div className="block">
+                                                <div className="flex items-center gap-2 text-[#212529] font-inter text-[14px] font-bold leading-[14.4px] tracking-[-0.12px] mb-[7px]">
+                                                    (31) 3373-9396
+                                                </div>
+                                                <div className="flex items-center gap-2 text-[#212529] font-inter text-[14px] font-bold leading-[14.4px] tracking-[-0.12px] mb-[7px]">
+                                                    (31) 3373-6374
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="mt-[14px]">
+                                        <p className="font-inter text-[#868E96] text-[14px] font-medium leading-[16px] mb-[7px]">
+                                            Outras localidades:
+                                        </p>
+                                        <div className="flex items-center gap-[10.66px] text-[#212529] font-inter text-[14px] font-bold leading-[14.4px] tracking-[-0.12px]">
+                                            <img src="/phone.svg" alt="phone" />
+                                            0800 001 3002
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button className="border-[1px] border-Secundary-600 text-Secundary-600 text-[14px] px-8 py-4 rounded-[6px] font-medium flex items-center gap-2">
                             <FaWhatsapp className="text-xl" />
                             Conversar com a equipe
                         </button>
@@ -95,11 +135,10 @@ export default function FaqSection() {
                                 </p>
                                 <img
                                     src="/section-cursor.svg"
-                                    className={`w-[32px] h-[32px] ${
-                                        activeIndex === index
-                                            ? "rotate-180"
-                                            : ""
-                                    }`}
+                                    className={`w-[32px] h-[32px] ${activeIndex === index
+                                        ? "rotate-180"
+                                        : ""
+                                        }`}
                                 />
                             </div>
                             {activeIndex === index && item.pergunta && (

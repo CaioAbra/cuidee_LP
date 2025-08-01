@@ -51,7 +51,11 @@ export default function Hero() {
                         <div className="flex items-center gap-8">
                             {/* Logo */}
                             <div>
-                                <img src="/logo-cuidee-crm.png" alt="Cuidee" />
+                                {scrolled ? (
+                                    <img src="/logo-cuidee-crm-black.svg" alt="Cuidee" />
+                                ): (
+                                    <img src="/logo-cuidee-crm.png" alt="Cuidee" />
+                                )}
                             </div>
 
                             {/* Navbar */}
