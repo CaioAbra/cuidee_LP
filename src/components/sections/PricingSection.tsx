@@ -21,7 +21,7 @@ export default function PricingSection() {
     }, []);
 
     return (
-        <section className="bg-[#F5F6F7] text-center p-[56px] md:px-[32px] md:py-[56px] md:py-[100px]">
+        <section data-animate="fade-up" className="bg-[#F5F6F7] text-center p-[56px] md:px-[32px] md:py-[56px] md:py-[100px]">
             <span
                 className="block text-center font-inter font-medium not-italic text-[14px] leading-[20px] tracking-[-0.084px] text-[#0F172A] uppercase"
                 style={{

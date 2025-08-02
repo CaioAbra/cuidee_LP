@@ -3,6 +3,7 @@ import { PhotoProvider, PhotoView } from "react-photo-view";
 import "react-photo-view/dist/react-photo-view.css";
 import instance from "@/api";
 import { useState, useEffect } from "react";
+import useScrollAnimation from "@/hooks/useScrollAnimation";
 
 export default function CuideeInformaSection() {
   const [slides, setSlides] = useState<any>();
@@ -19,10 +20,9 @@ export default function CuideeInformaSection() {
       fechApi();
   }, []);
 
-  console.log(slides)
-
+  useScrollAnimation();
   return (
-    <section className="py-[56px] md:py-[100px] px-[56px] md:px-8">
+    <section className="py-[56px] md:py-[100px] px-[56px] md:px-8" data-animate="fade-up">
       <h2 className="font-raleway text-neutral-600 text-[32px] font-bold leading-[38px] tracking-[-0.32px] text-center">
         Patrocínio
       </h2>

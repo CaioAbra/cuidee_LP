@@ -36,7 +36,7 @@ export default function FaqSection() {
     }, []);
 
     return (
-        <section className="bg-[url('/tecno-3.png')] bg-cover p-[56px] md:px-[32px] md:py-[100px]">
+        <section data-animate="fade-up" className="bg-[url('/tecno-3.png')] bg-cover p-[56px] md:px-[32px] md:py-[100px]">
             <div className="max-w-[1216px] mx-auto grid grid-cols-1 md:grid-cols-2 justify-center items-start">
                 {/* ESQUERDA */}
                 <div className="space-y-9">

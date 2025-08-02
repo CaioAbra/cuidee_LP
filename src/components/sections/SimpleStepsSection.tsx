@@ -26,7 +26,7 @@ export default function SimpleStepsSection() {
     ];
     
     return (
-        <section className="bg-[url('/bg-simple.png')] bg-cover text-white mt-[56px] md:mt-[120px] py-[56px] md:py-[120px] ">
+        <section data-animate="fade-up" className="bg-[url('/bg-simple.png')] bg-cover text-white mt-[56px] md:mt-[120px] py-[56px] md:py-[120px] ">
             <div className="max-w-[1216px] mx-auto px-[56px] md:px-8 flex flex-col-reverse md:flex-ccol md:flex-row items-center gap-[40px] md:gap-[80px]">
                 {/* Imagem lado esquerdo */}
                 <div>

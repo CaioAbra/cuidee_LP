@@ -20,30 +20,26 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer className="bg-[#0C3632] text-white pt-[80px] md:pt-[150px] px-[40px] md:px-8">
+    <footer data-animate="fade-up" className="bg-[#0C3632] text-white p-[40px] md:pt-[100px] md:pb-[40px] px-[56px] md:px-8">
       {/* Seção superior */}
-      <div className="w-full bg-[#36544F] rounded-[24px] md:max-w-[1216px] md:h-[337px] md:mx-auto md:flex md:items-center md:px-[112px] md:relative">
-        <div className="px-[24px] pt-[24px] relative z-10 max-w-xl space-y-6 text-center md:text-left">
-          <p className="text-sm text-white/70">
+      <div className="w-full bg-[#36544F] rounded-[24px] py-[24px] md:mt-[48px] md:max-w-[1216px] md:h-[337px] md:mx-auto md:flex md:items-center md:px-[112px] md:py-0 md:relative">
+        <div className="px-[24px] relative z-10 max-w-xl text-left">
+          <p className="font-medium text-[16px] leading-[24px] tracking-[-0.011em] text-white md:text-[18px] md:leading-[28px]">
             Leve saúde e economia no seu bolso
           </p>
-          <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-white leading-snug">
-            {textos.find((value) => value.id === "TITULO4")?.texto}
+          <h2 className="font-raleway font-bold text-[26px] leading-[31.2px] tracking-[-0.01em] text-white md:text-[32px] md:leading-[38px] md:tracking-[-0.01em] mt-[16px]"  >
+            {textos.find((value) => value.id === 'TITULO4')?.texto}
           </h2>
-          <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 mt-6">
-            <Image
+          <div className="flex sm:flex-row justify-start gap-4 mt-[32px]">
+            <img
               src="/appstore.png"
               alt="App Store"
-              width={140}
-              height={40}
-              className="w-[140px] h-auto"
+              className="w-[133px] h-auto"
             />
-            <Image
+            <img
               src="/playstore.png"
               alt="Play Store"
-              width={140}
-              height={40}
-              className="w-[140px] h-auto"
+              className="w-[133px] h-auto"
             />
           </div>
         </div>
@@ -59,78 +55,138 @@ export default function Footer() {
       </div>
 
       {/* Seção de links */}
-      <div className="max-w-[1216px] mx-auto px-6 lg:px-20 py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 border-b border-white/20 text-sm text-white text-center sm:text-left">
+      <div className="max-w-[1216px] mx-auto grid grid-cols-2 gap-[48px] self-stretch mt-[24px] md:mt-[48px] pt-[24px] pb-[24px] md:pb-[48px] border-b border-white/15 md:flex md:flex-row md:flex-row md:justify-between ">
         <div>
-          <h4 className="font-bold mb-2">Sou paciente</h4>
-          <ul className="space-y-1 text-white/70">
-            <li><a href="#">Fazer login</a></li>
-            <li><a href="#">Fale conosco</a></li>
+          <h4 className="font-raleway font-bold text-[16px] leading-[20px] tracking-[-0.01em] text-[#F2F3F6] uppercase">
+            Sou paciente
+          </h4>
+          <ul className="mt-[16px] flex flex-col gap-[16px]">
+            <li>
+              <a href="#" className="font-inter font-normal text-[16px] leading-[24px] tracking-[-0.01em] text-[#199A8E]">
+                Fazer login
+              </a>
+            </li>
+            <li>
+              <a href="#" className="font-inter font-normal text-[16px] leading-[24px] tracking-[-0.01em] text-[#199A8E]">
+                Fale conosco
+              </a>
+            </li>
           </ul>
         </div>
         <div>
-          <h4 className="font-bold mb-2">Sou profissional de saúde</h4>
-          <ul className="space-y-1 text-white/70">
-            <li><a href="#">Fazer login</a></li>
-            <li><a href="#">Quero ser um parceiro</a></li>
-            <li><a href="#">Fale conosco</a></li>
+          <h4 className="font-raleway font-bold text-[16px] leading-[20px] tracking-[-0.01em] text-[#F2F3F6] uppercase">
+            Sou profissional de saúde
+          </h4>
+          <ul className="mt-[16px] flex flex-col gap-[16px]">
+            <li>
+              <a href="#" className="font-inter font-normal text-[16px] leading-[24px] tracking-[-0.01em] text-[#199A8E]">
+                Fazer login
+              </a>
+            </li>
+            <li>
+              <a href="#" className="font-inter font-normal text-[16px] leading-[24px] tracking-[-0.01em] text-[#199A8E]">
+                Quero ser um parceiro
+              </a>
+            </li>
+            <li>
+              <a href="#" className="font-inter font-normal text-[16px] leading-[24px] tracking-[-0.01em] text-[#199A8E]">
+                Fale conosco
+              </a>
+            </li>
           </ul>
         </div>
         <div>
-          <h4 className="font-bold mb-2">Sobre nós</h4>
-          <ul className="space-y-1 text-white/70">
-            <li><a href="#">Unidades</a></li>
-            <li><a href="#">Sobre nós</a></li>
-            <li><a href="#">FAQ</a></li>
+          <h4 className="font-raleway font-bold text-[16px] leading-[20px] tracking-[-0.01em] text-[#F2F3F6] uppercase">
+            Sobre nós
+          </h4>
+          <ul className="mt-[16px] flex flex-col gap-[16px]">
+            <li>
+              <a href="#" className="font-inter font-normal text-[16px] leading-[24px] tracking-[-0.01em] text-[#199A8E]">
+                Unidades
+              </a>
+            </li>
+            <li>
+              <a href="#" className="font-inter font-normal text-[16px] leading-[24px] tracking-[-0.01em] text-[#199A8E]">
+                Sobre nós
+              </a>
+            </li>
+            <li>
+              <a href="#" className="font-inter font-normal text-[16px] leading-[24px] tracking-[-0.01em] text-[#199A8E]">
+                FAQ
+              </a>
+            </li>
           </ul>
         </div>
         <div>
-          <h4 className="font-bold mb-2">Baixe o app</h4>
-          <div className="flex flex-col sm:flex-row sm:justify-center lg:block gap-3">
-            <Image
-              src="/appstore.png"
-              alt="App Store"
-              width={120}
-              height={40}
-              className="w-[120px] h-auto mx-auto sm:mx-0"
-            />
-            <Image
-              src="/playstore.png"
-              alt="Play Store"
-              width={120}
-              height={40}
-              className="w-[120px] h-auto mx-auto sm:mx-0"
-            />
+          <h4 className="font-raleway font-bold text-[16px] leading-[20px] tracking-[-0.01em] text-[#F2F3F6] uppercase">
+            Baixe o app
+          </h4>
+          <div className="flex flex-col gap-[12px] mt-[16px]">
+            <div className="block">
+              <img
+                src="/appstore.png"
+                alt="App Store"
+                className="w-[133px] h-auto"
+              />
+            </div>
+            <div className="block">
+              <img
+                src="/playstore.png"
+                alt="Play Store"
+                className="w-[133px] h-auto"
+              />
+            </div>
           </div>
         </div>
         <div>
-          <h4 className="font-bold mb-2">Nossas redes</h4>
-          <div className="flex justify-center lg:justify-start gap-4">
-            <a href="#"><FaInstagram className="text-2xl text-white" /></a>
-            <a href="#"><FaFacebookF className="text-2xl text-white" /></a>
+          <h4 className="font-raleway font-bold text-[16px] leading-[20px] tracking-[-0.01em] text-[#F2F3F6] uppercase">
+            Nossas redes
+          </h4>
+          <div className="flex justify-start lg:justify-start gap-4 mt-[16px]">
+            <a href="#">
+              <img src="/instagram.svg" alt="instagram" />
+            </a>
+            <a href="#">
+              <img src="/facebook.svg" alt="facebook" />
+            </a>
           </div>
         </div>
       </div>
 
       {/* Seção final */}
-      <div className="flex flex-col lg:flex-row justify-between items-center px-6 lg:px-20 py-6 text-xs sm:text-sm text-white/70 gap-4 max-w-[1216px] mx-auto text-center lg:text-left">
-        <div className="flex items-center justify-center lg:justify-start gap-2">
-          <Image
+      <div className="max-w-[1216px] flex flex-col justify-center md:flex-row md:justify-between items-center pt-[48px] mx-auto">
+        <div className="flex flex-col md:flex-row items-center justify-center lg:justify-start gap-[16px] order-1">
+          <img
             src="/logo-cuidee-white.png"
             alt="Logo Cuidee"
-            width={24}
-            height={24}
+            className="w-[40px] h-[40px]"
           />
-          <span>Pague quando usar, use sempre que precisar.</span>
+          <span className="block max-w-[160px] font-inter font-normal text-[14px] leading-[20px] tracking-[-0.01em] text-[#F2F3F6] text-center md:text-start">
+            Pague quando usar, use sempre que precisar.
+          </span>
         </div>
-        <p className="text-center order-3 lg:order-2">
+
+        <p className="font-inter font-normal text-[14px] leading-[20px] tracking-[-0.01em] text-[#E2E4E9] text-center order-2 my-[32px] md:my-0">
           ©2025 Cuidee. Todos os direitos reservados.
         </p>
-        <div className="flex justify-center lg:justify-end gap-4 order-2 lg:order-3">
-          <a href="#" className="hover:text-white">Termos de Uso</a>
+
+        <div className="flex justify-center lg:justify-end gap-4 order-3">
+          <a
+            href="#"
+            className="font-inter font-normal text-[16px] leading-[24px] tracking-[-0.01em] text-[#199A8E] hover:text-white"
+          >
+            Termos de Uso
+          </a>
           <span>|</span>
-          <a href="#" className="hover:text-white">Política de Privacidade</a>
+          <a
+            href="#"
+            className="font-inter font-normal text-[16px] leading-[24px] tracking-[-0.01em] text-[#199A8E] hover:text-white"
+          >
+            Política de Privacidade
+          </a>
         </div>
       </div>
+
     </footer>
   );
 }
