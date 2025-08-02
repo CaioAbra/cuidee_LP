@@ -1,34 +1,42 @@
 "use client";
 import { PhotoProvider, PhotoView } from "react-photo-view";
 import "react-photo-view/dist/react-photo-view.css";
-import Image from "next/image";
-
-const images = [
-  { src: "/imagens/img1.png", alt: "Anuidade 2025" },
-  { src: "/imagens/img2.png", alt: "Mulher Médica" },
-  { src: "/imagens/img3.png", alt: "Hanseníase 1" },
-  { src: "/imagens/img4.png", alt: "Hanseníase 2" },
-  { src: "/imagens/img5.png", alt: "Hanseníase 3" },
-];
+import instance from "@/api";
+import { useState, useEffect } from "react";
 
 export default function CuideeInformaSection() {
+  const [slides, setSlides] = useState<any>();
+
+  useEffect(() => {
+      async function fechApi() {
+          try {
+              const { data } = await instance.get("/SiteAberto/get-banner-publicidade-site");
+              setSlides(data);
+          } catch (err) {
+              console.error("Erro ao carregar planos:", err);
+          }
+      }
+      fechApi();
+  }, []);
+
+  console.log(slides)
+
   return (
-    <section className="pt-[80px] md:pt-[100px] pb-[80px] md:pb-[100px] px-4">
-      <h2 className="font-raleway text-center text-neutral-600 text-[32px] font-bold mb-[32px]">
+    <section className="py-[56px] md:py-[100px] px-[56px] md:px-8">
+      <h2 className="font-raleway text-neutral-600 text-[32px] font-bold leading-[38px] tracking-[-0.32px] text-center">
         Patrocínio
       </h2>
 
       <PhotoProvider>
-        <div className="max-w-[1216px] mx-auto grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-4">
+        <div className=" mt-[32px] max-w-[1216px] mx-auto grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-4">
           {/* Imagem grande */}
           <div className="md:row-span-1">
-            <PhotoView src={images[0].src}>
-              <div className="relative w-full h-[430px]"> {/* altura fixa ou responsiva */}
-                <Image
-                  src={images[0].src}
-                  alt={images[0].alt}
-                  fill
-                  className="object-cover rounded-lg cursor-pointer"
+            <PhotoView src={slides?.master?.foto}>
+              <div className="relative w-full h-[213px] md:h-[430px] overflow-hidden">
+                <img
+                  src={slides?.master?.foto}
+                  alt="master"
+                  className="w-full object-cover rounded-lg cursor-pointer"
                 />
               </div>
             </PhotoView>
@@ -36,14 +44,13 @@ export default function CuideeInformaSection() {
 
           {/* Grid 2x2 das imagens pequenas */}
           <div className="grid grid-cols-2 gap-4">
-            {images.slice(1).map((img, idx) => (
+            {slides?.ouro?.map((img:any, idx:any) => (
               <PhotoView key={idx} src={img.src}>
-                <div className="relative w-full h-[205px]">
-                  <Image
-                    src={img.src}
-                    alt={img.alt}
-                    fill
-                    className="object-cover rounded-lg cursor-pointer"
+                <div className="relative w-full h-[98.75px] md:h-[205px] overflow-hidden">
+                  <img
+                    src={img.foto}
+                    alt="ouro"
+                    className="w-full object-cover rounded-lg cursor-pointer"
                   />
                 </div>
               </PhotoView>

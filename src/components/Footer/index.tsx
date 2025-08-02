@@ -8,27 +8,27 @@ export default function Footer() {
   const [textos, setTextos] = useState<any[]>([]);
 
   useEffect(() => {
-      async function fechApi() {
-          try {
-              const { data } = await instance.get("/SiteAberto/get-textos-site");
-              setTextos(data);
-          } catch (err) {
-              console.error("Erro ao carregar textos:", err);
-          }
+    async function fechApi() {
+      try {
+        const { data } = await instance.get("/SiteAberto/get-textos-site");
+        setTextos(data);
+      } catch (err) {
+        console.error("Erro ao carregar textos:", err);
       }
-      fechApi();
+    }
+    fechApi();
   }, []);
 
   return (
-    <footer className="bg-[#0C3632] text-white pt-[80px] md:pt-[150px]">
+    <footer className="bg-[#0C3632] text-white pt-[80px] md:pt-[150px] px-[40px] md:px-8">
       {/* Seção superior */}
-      <div className="relative max-w-[1216px] bg-[#36544F] rounded-[20px] mx-4 md:mx-auto px-6 md:px-[112px] py-[32px] overflow-visible mb-[48px]">
-        <div className="relative z-10 max-w-2xl space-y-6 text-center md:text-left">
+      <div className="w-full bg-[#36544F] rounded-[24px] md:max-w-[1216px] md:h-[337px] md:mx-auto md:flex md:items-center md:px-[112px] md:relative">
+        <div className="px-[24px] pt-[24px] relative z-10 max-w-xl space-y-6 text-center md:text-left">
           <p className="text-sm text-white/70">
             Leve saúde e economia no seu bolso
           </p>
           <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-white leading-snug">
-              {textos.find((value) => value.id === "TITULO4")?.texto}
+            {textos.find((value) => value.id === "TITULO4")?.texto}
           </h2>
           <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 mt-6">
             <Image
@@ -49,13 +49,11 @@ export default function Footer() {
         </div>
 
         {/* Mockup do app fora do container */}
-        <div className="hidden lg:block absolute right-[40px] xl:right-[112px] bottom-0 z-0">
-          <Image
+        <div className="md:absolute md:right-[20px] md:bottom-0">
+          <img
             src="/mockup-app-cuidee.png"
             alt="App Cuidee"
-            width={260}
-            height={500}
-            className="object-contain"
+            className="flex-shrink-0 w-full -ml-[13px] md:w-[260px] lg:w-[400px] h-auto lg:object-contain"
           />
         </div>
       </div>

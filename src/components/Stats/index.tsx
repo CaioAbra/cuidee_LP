@@ -57,7 +57,7 @@ export default function Stats() {
     }, []);
 
     return (
-        <section className="bg-white pt-[56px] md:pt-[100px] lg:pt-[200px] px-[24px] md:px-8 bg-[url('/tecno.png')] bg-contain bg-no-repeat bg-top">
+        <section className="bg-white pt-[56px] md:pt-[100px] lg:pt-[200px] px-[56px] md:px-8 bg-[url('/tecno.png')] bg-contain bg-no-repeat bg-top">
             <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-8 text-center">
                 {stats.map((stat, index) => (
                     <div key={stat.id} className="flex flex-col items-center">
@@ -74,7 +74,7 @@ export default function Stats() {
                         </h3>
 
                         <p
-                            className="mt-[10px] px-10 self-stretch font-inter text-neutral-400 text-center text-[14px] leading-[23px] tracking-[-0.176px] font-normal not-italic sm:text-[17px] sm:leading-[25px] md:text-[16px] md:leading-[27px]"
+                            className=" mt-[10px] px-5 self-stretch font-inter text-neutral-400 text-center text-[14px] leading-[20px] tracking-[-0.176px] font-normal not-italicsm:text-[15px] sm:leading-[22px] md:text-[16px] md:leading-[24px]"
                             style={{
                                 fontFeatureSettings: "'ss11' on, 'cv09' on, 'liga' off, 'calt' off",
                             }}

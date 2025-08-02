@@ -46,7 +46,7 @@ export default function Hero() {
                     }`}
                 >
                     {" "}
-                    <div className="flex items-center justify-between max-w-[1216px] mx-auto px-[24px] md:px-8 py-[13px]">
+                    <div className="flex items-center justify-between max-w-[1216px] mx-auto px-[56px] md:px-8 py-[13px]">
                         {/* Logo + Navbar */}
                         <div className="flex items-center gap-8">
                             {/* Logo */}
@@ -90,7 +90,7 @@ export default function Hero() {
                 </div>
 
                 {/* Hero principal */}
-                <div className={`text-center px-[24px] md:px-8 mb-10 ${
+                <div className={`text-center px-[56px] md:px-8 mb-10 ${
                     scrolled ? "mt-[50px] md:mt-[150px]" : "mt-[50px] md:mt-[80px]"
                 }`}>
                     <span
