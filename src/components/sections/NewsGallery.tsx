@@ -22,7 +22,7 @@ export default function CuideeInformaSection() {
 
   useScrollAnimation();
   return (
-    <section className="py-[56px] md:py-[100px] px-[56px] md:px-8" data-animate="fade-up">
+    <section className="py-[56px] md:py-[100px] px-[24px] md:px-8" data-animate="fade-up">
       <h2 className="font-raleway text-neutral-600 text-[32px] font-bold leading-[38px] tracking-[-0.32px] text-center">
         Patrocínio
       </h2>

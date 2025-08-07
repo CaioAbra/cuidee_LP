@@ -57,10 +57,10 @@ export default function Stats() {
     }, []);
 
     return (
-        <section data-animate="fade-up" className="bg-white pt-[56px] md:pt-[100px] lg:pt-[200px] px-[56px] md:px-8 bg-[url('/tecno.png')] bg-contain bg-no-repeat bg-top">
+        <section data-animate="fade-up" className="bg-white pt-[56px] md:pt-[100px] lg:pt-[200px] px-[24px] md:px-8 bg-[url('/tecno.png')] bg-contain bg-no-repeat bg-top">
             <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-8 text-center">
                 {stats.map((stat, index) => (
-                    <div key={stat.id} className="flex flex-col items-center">
+                    <div key={stat.id} className="flex flex-col">
                         <h3
                             className="font-raleway text-primary-base text-center text-[18px] leading-[22px] tracking-[-0.18px] font-bold not-italic inline-block pb-3 border-b-2 border-primary-light sm:text-[24px] sm:leading-[28px] sm:tracking-[-0.24px] md:text-[30px] md:leading-[34px] md:tracking-[-0.28px] lg:text-[34px] lg:leading-[38px] lg:tracking-[-0.34px]"
                             style={{

@@ -20,7 +20,7 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer data-animate="fade-up" className="bg-[#0C3632] text-white p-[40px] md:pt-[100px] md:pb-[40px] px-[56px] md:px-8">
+    <footer data-animate="fade-up" className="bg-[#0C3632] text-white p-[40px] md:pt-[100px] md:pb-[40px] px-[24px] md:px-8">
       {/* Seção superior */}
       <div className="w-full bg-[#36544F] rounded-[24px] py-[24px] md:mt-[48px] md:max-w-[1216px] md:h-[337px] md:mx-auto md:flex md:items-center md:px-[112px] md:py-0 md:relative">
         <div className="px-[24px] relative z-10 max-w-xl text-left">
@@ -62,34 +62,34 @@ export default function Footer() {
           </h4>
           <ul className="mt-[16px] flex flex-col gap-[16px]">
             <li>
-              <a href="#" className="font-inter font-normal text-[16px] leading-[24px] tracking-[-0.01em] text-[#199A8E]">
+              <a href="#" className="font-inter font-normal text-[16px] leading-[24px] tracking-[-0.01em] text-[#199A8E] hover:text-white">
                 Fazer login
               </a>
             </li>
             <li>
-              <a href="#" className="font-inter font-normal text-[16px] leading-[24px] tracking-[-0.01em] text-[#199A8E]">
+              <a href="#" className="font-inter font-normal text-[16px] leading-[24px] tracking-[-0.01em] text-[#199A8E] hover:text-white">
                 Fale conosco
               </a>
             </li>
           </ul>
         </div>
         <div>
-          <h4 className="font-raleway font-bold text-[16px] leading-[20px] tracking-[-0.01em] text-[#F2F3F6] uppercase">
+          <h4 className="font-raleway font-bold text-[16px] leading-[20px] tracking-[-0.01em] text-[#F2F3F6] uppercase ">
             Sou profissional de saúde
           </h4>
           <ul className="mt-[16px] flex flex-col gap-[16px]">
             <li>
-              <a href="#" className="font-inter font-normal text-[16px] leading-[24px] tracking-[-0.01em] text-[#199A8E]">
+              <a href="#" className="font-inter font-normal text-[16px] leading-[24px] tracking-[-0.01em] text-[#199A8E] hover:text-white">
                 Fazer login
               </a>
             </li>
             <li>
-              <a href="#" className="font-inter font-normal text-[16px] leading-[24px] tracking-[-0.01em] text-[#199A8E]">
+              <a href="#" className="font-inter font-normal text-[16px] leading-[24px] tracking-[-0.01em] text-[#199A8E] hover:text-white">
                 Quero ser um parceiro
               </a>
             </li>
             <li>
-              <a href="#" className="font-inter font-normal text-[16px] leading-[24px] tracking-[-0.01em] text-[#199A8E]">
+              <a href="#" className="font-inter font-normal text-[16px] leading-[24px] tracking-[-0.01em] text-[#199A8E] hover:text-white">
                 Fale conosco
               </a>
             </li>
@@ -101,17 +101,17 @@ export default function Footer() {
           </h4>
           <ul className="mt-[16px] flex flex-col gap-[16px]">
             <li>
-              <a href="#" className="font-inter font-normal text-[16px] leading-[24px] tracking-[-0.01em] text-[#199A8E]">
+              <a href="#" className="font-inter font-normal text-[16px] leading-[24px] tracking-[-0.01em] text-[#199A8E] hover:text-white">
                 Unidades
               </a>
             </li>
             <li>
-              <a href="#" className="font-inter font-normal text-[16px] leading-[24px] tracking-[-0.01em] text-[#199A8E]">
+              <a href="#" className="font-inter font-normal text-[16px] leading-[24px] tracking-[-0.01em] text-[#199A8E] hover:text-white">
                 Sobre nós
               </a>
             </li>
             <li>
-              <a href="#" className="font-inter font-normal text-[16px] leading-[24px] tracking-[-0.01em] text-[#199A8E]">
+              <a href="#" className="font-inter font-normal text-[16px] leading-[24px] tracking-[-0.01em] text-[#199A8E] hover:text-white">
                 FAQ
               </a>
             </li>

@@ -21,8 +21,9 @@ export default function PricingSection() {
     }, []);
 
     return (
-        <section data-animate="fade-up" className="bg-[#F5F6F7] text-center p-[56px] md:px-[32px] md:py-[56px] md:py-[100px]">
+        <section className="bg-[#F5F6F7] text-center p-[56px] md:px-[32px] md:py-[56px] md:py-[100px]">
             <span
+                data-animate="fade-up" 
                 className="block text-center font-inter font-medium not-italic text-[14px] leading-[20px] tracking-[-0.084px] text-[#0F172A] uppercase"
                 style={{
                     fontFeatureSettings: "'ss11' on, 'cv09' on, 'liga' off, 'calt' off",
@@ -32,6 +33,7 @@ export default function PricingSection() {
             </span>
 
             <h2
+                data-animate="fade-up" 
                 className="text-center font-raleway font-bold not-italic text-[32px] leading-[38px] tracking-[-0.32px] text-neutral-900 mt-[16px]"
                 style={{
                     fontFeatureSettings: "'ss11' on, 'cv09' on, 'liga' off, 'calt' off",
@@ -42,7 +44,7 @@ export default function PricingSection() {
             </h2>
 
             {/* Toggle Mensal / Anual */}
-            <div className="w-[200px] h-[44px] inline-flex bg-neutral-200 rounded-full p-[4px] mt-[32px] md:mt-[48px]">
+            <div data-animate="fade-up" className="w-[200px] h-[44px] inline-flex bg-neutral-200 rounded-full p-[4px] mt-[32px] md:mt-[48px]">
                 <button
                     onClick={() => setPlanType("mensal")}
                     className={`w-[99px] h-[36px] rounded-full text-sm font-poppins transition-all duration-500 ease-in-out ${
@@ -62,7 +64,7 @@ export default function PricingSection() {
             </div>
 
             {/* Card de plano */}
-            <div className="mt-[48px]">
+            <div data-animate="fade-up" className="mt-[48px]">
                 {planType &&
                     planos.map((plano, index) => {
                         return (
@@ -112,7 +114,7 @@ export default function PricingSection() {
                                         {plano?.descricao}
                                     </p>{" "}
                                     <button
-                                        className="mt-[32px] flex items-center justify-center gap-1 w-full px-[10px] py-[12px] rounded-[8px] border border-primary-base bg-white text-primary-base font-inter text-[16px] leading-[24px] tracking-[-0.176px] font-medium shadow-[0_1px_2px_rgba(55,93,251,0.08)] transition-colors duration-200 active:bg-[#D6E6FF] active:border-transparent"
+                                        className="mt-[32px] flex items-center justify-center gap-1 w-full px-[10px] py-[12px] rounded-[8px] border border-primary-base bg-white text-primary-base font-inter text-[16px] leading-[24px] tracking-[-0.176px] font-medium shadow-[0_1px_2px_rgba(55,93,251,0.08)] transition-colors duration-200 active:text-white active:bg-primary-base"
                                         style={{
                                             fontFeatureSettings: "'ss11' on, 'cv09' on, 'liga' off, 'calt' off",
                                         }}
