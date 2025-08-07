@@ -20,7 +20,7 @@ export default function AppIntroSection() {
 
     return (
         <section data-animate="fade-up"  className="bg-white pt-[56px] md:pt-[100px]">
-            <div className="max-w-[1216px] mx-auto px-[56px] md:px-8 flex flex-col lg:flex-row items-center justify-between gap-[40px] md:gap-[120px]">
+            <div className="max-w-[1216px] mx-auto px-[24px] md:px-8 flex flex-col lg:flex-row items-center justify-between gap-[40px] md:gap-[120px]">
                 {/* Texto */}
                 <div className="max-w-xl">
                     <p
@@ -51,7 +51,7 @@ export default function AppIntroSection() {
                         {textos.find((value) => value.id === "TEXTO1")?.texto}
                     </p>
                     <button
-                        className="flex items-center justify-center gap-1 w-[239px] px-[10px] py-[12px] rounded-[8px] border border-primary-base bg-white text-primary-base font-inter font-medium text-[16px] leading-[24px] tracking-[-0.176px] shadow-[0_1px_2px_rgba(55,93,251,0.08)] mt-[24px] transition-colors duration-200 active:bg-[#D6E6FF] active:border-transparent"
+                        className="flex items-center justify-center gap-1 w-[239px] px-[10px] py-[12px] rounded-[8px] border border-primary-base bg-white text-primary-base font-inter font-medium text-[16px] leading-[24px] tracking-[-0.176px] shadow-[0_1px_2px_rgba(55,93,251,0.08)] mt-[24px] transition-colors duration-200 active:text-white active:bg-primary-base"
                         style={{
                             fontFeatureSettings: "'ss11' on, 'cv09' on, 'liga' off, 'calt' off",
                         }}

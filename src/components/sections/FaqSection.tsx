@@ -36,8 +36,8 @@ export default function FaqSection() {
     }, []);
 
     return (
-        <section data-animate="fade-up" className="bg-[url('/tecno-3.png')] bg-cover p-[56px] md:px-[32px] md:py-[100px]">
-            <div className="max-w-[1216px] mx-auto grid grid-cols-1 md:grid-cols-2 justify-center items-start">
+        <section className="bg-[url('/tecno-3.png')] bg-cover p-[56px] md:px-[32px] md:py-[100px]">
+            <div data-animate="fade-up" className="max-w-[1216px] mx-auto grid grid-cols-1 md:grid-cols-2 justify-center items-start">
                 {/* ESQUERDA */}
                 <div className="space-y-9">
                     <div>
@@ -99,7 +99,7 @@ export default function FaqSection() {
                                         <div className="flex gap-[10.66px]">
                                             <img src="/whatsapp.svg" alt="whatsapp" className="w-[15px] h-[15px]" />
                                             <div className="block">
-                                                <div className="flex items-center gap-2 text-[#212529] font-inter text-[14px] font-bold leading-[14.4px] tracking-[-0.12px] mb-[7px]">
+                                                <div className="flex items-center gap-2 text-[#212529] font-inter text-[16px] font-bold leading-[14.4px] tracking-[-0.12px] mb-[7px]">
                                                     {atendimento?.whats}
                                                 </div>
                                             </div>
@@ -110,7 +110,7 @@ export default function FaqSection() {
                                         <p className="font-inter text-[#868E96] text-[14px] font-medium leading-[16px] mb-[7px]">
                                             Outras localidades:
                                         </p>
-                                        <div className="flex items-center gap-[10.66px] text-[#212529] font-inter text-[14px] font-bold leading-[14.4px] tracking-[-0.12px]">
+                                        <div className="flex items-center gap-[10.66px] text-[#212529] font-inter text-[16px] font-bold leading-[14.4px] tracking-[-0.12px]">
                                             <img src="/phone.svg" alt="phone" className="w-[15px] h-[15px]"/>
                                             {atendimento?.telefone}
                                         </div>
@@ -118,7 +118,7 @@ export default function FaqSection() {
                                 </div>
                             </div>
                         </div>
-                        <button className="flex items-center justify-center gap-2 w-full md:w-[360px] h-[52px] mt-[40px] px-6 py-4 rounded-[6px] border border-[#00647E] text-[#00647E] font-inter font-medium text-[14px] leading-[21px] transition-colors duration-300 ease-in-out hover:bg-[#00647E] hover:text-white">
+                        <button className="flex items-center justify-center gap-2 w-full md:w-[360px] h-[52px] mt-[40px] px-6 py-4 rounded-[6px] border border-primary-base text-[#00647E] font-inter font-medium text-[14px] leading-[21px] transition-colors duration-300 ease-in-out hover:bg-primary-base hover:text-white">
                             <img src="/whatsapp.svg" alt="whatsapp" />
                             Conversar com a equipe
                         </button>
@@ -128,7 +128,7 @@ export default function FaqSection() {
                 </div>
 
                 {/* DIREITA - FAQ */}
-                <div className="space-y-4 mt-[40px] md:mt-[0px]">
+                <div data-animate="fade-up" className="space-y-4 mt-[40px] md:mt-[0px]">
                     {faq.map((item, index) => (
                         <div
                             key={index}
