@@ -26,15 +26,15 @@ export default function SimpleStepsSection() {
     ];
     
     return (
-        <section data-animate="fade-up" className="bg-[url('/bg-simple.png')] bg-cover text-white mt-[56px] md:mt-[120px] py-[56px] md:py-[120px] ">
-            <div className="max-w-[1216px] mx-auto px-[56px] md:px-8 flex flex-col-reverse md:flex-ccol md:flex-row items-center gap-[40px] md:gap-[80px]">
+        <section className="bg-[url('/bg-simple.png')] bg-cover text-white mt-[56px] md:mt-[120px] py-[56px] md:py-[120px] ">
+            <div className="max-w-[1216px] mx-auto px-[24px] md:px-8 flex flex-col-reverse md:flex-ccol md:flex-row items-center gap-[40px] md:gap-[80px]">
                 {/* Imagem lado esquerdo */}
-                <div>
+                <div data-animate="fade-up" >
                     <img src="/video-celular.png" alt="App em uso" className="rounded-2xl w-full md:w-[552px] md:h-[573px]" />
                 </div>
 
                 {/* Conteúdo texto lado direito */}
-                <div className="flex-1">
+                <div className="flex-1" data-animate="fade-up" >
                     <span
                         className="block font-inter text-white text-[14px] leading-[20px] tracking-[-0.084px] font-medium not-italic "
                         style={{
